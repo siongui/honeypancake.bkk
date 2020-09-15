@@ -2,7 +2,7 @@
 How to Develope
 ===============
 
-.. image:: https://travis-ci.org/siongui/honeypancake.bkk?branch=master
+.. image:: https://travis-ci.org/siongui/honeypancake.bkk.svg?branch=master
     :target: https://travis-ci.org/siongui/honeypancake.bkk
 
 .. See how to add travis ci image from https://raw.githubusercontent.com/demizer/go-rst/master/README.rst
