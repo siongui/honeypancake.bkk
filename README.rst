@@ -2,8 +2,8 @@
 How to Develope
 ===============
 
-.. image:: https://travis-ci.org/wangding588/wdpm.png?branch=master
-    :target: https://travis-ci.org/wangding588/wdpm
+.. image:: https://travis-ci.org/siongui/honeypancake.bkk?branch=master
+    :target: https://travis-ci.org/siongui/honeypancake.bkk
 
 .. See how to add travis ci image from https://raw.githubusercontent.com/demizer/go-rst/master/README.rst
    https://github.com/demizer/go-rst/commit/9651ab7b5acc997ea2751845af9f2d6efee825df
@@ -40,27 +40,27 @@ First-time Setup
      $ cd
      $ mkdir dev
      $ cd ~/dev/
-     $ git clone https://github.com/wangding588/wdpm.git wdpm
+     $ git clone https://github.com/siongui/honeypancake.bkk.git honeypancake.bkk
 
 4. Install Python tools:
 
    .. code-block:: bash
 
-     $ cd ~/dev/wdpm/
+     $ cd ~/dev/honeypancake.bkk/
      $ sudo pip install -r requirements.txt
 
 5. Install Pelican `i18n_subsites`_ plugin:
 
    .. code-block:: bash
 
-     $ cd ~/dev/wdpm/
+     $ cd ~/dev/honeypancake.bkk/
      $ make download
 
 6. Generate CSS file:
 
    .. code-block:: bash
 
-     $ cd ~/dev/wdpm/
+     $ cd ~/dev/honeypancake.bkk/
      $ make scss
 
 
@@ -90,7 +90,7 @@ Daily Development
 .. code-block:: bash
 
     # start edit and develope
-    $ cd ~/dev/wdpm/
+    $ cd ~/dev/honeypancake.bkk/
     # If something changes, re-generate the website:
     $ make html
     # start dev server
