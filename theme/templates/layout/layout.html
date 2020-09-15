@@ -1,0 +1,53 @@
+{#
+  HTML5 Semantic Elements
+  @see http://www.w3schools.com/html/html5_semantic_elements.asp
+
+  Facebook Content Sharing Best Practices
+  @see https://developers.facebook.com/docs/sharing/best-practices
+#}
+{%- from 'layout/includes/i18n.html' import translations_for, lang_code2name -%}
+{%- from 'layout/includes/time.html' import Gregorian_calendar -%}
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+<head>
+  <meta charset="utf-8">
+  <title>{%- block title -%}{{ SITENAME }}{%- endblock -%}</title>
+  <meta name="keywords" content="{% block meta_keywords -%}{{ META_KEYWORDS }}{%- endblock %}"/>
+  <meta name="description" content="{% block meta_description -%}{{ META_DESCRIPTION }}{%- endblock %}"/>
+  <meta name="author" content="{% block meta_author -%}{{ AUTHOR }}{%- endblock %}"/>
+  {%- if OG_TITLE -%}<meta property="og:title" content="{{ OG_TITLE }}" />{%- endif -%}
+  {%- if OG_IMAGE -%}
+    <meta property="og:image" content="{{ OG_IMAGE }}" />
+  {% else %}
+    <meta property="og:image" content="{{ SITEURL }}/images/honeypancake.bkk-logo.png" />
+  {%- endif -%}
+  {%- if OG_DESCRIPTION -%}<meta property="og:description" content="{{ OG_DESCRIPTION }}" />{%- endif -%}
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="manifest" href="{{ SITEURL }}/manifest.json" />
+  <link rel="icon" type="image/gif" href="{{ SITEURL }}/images/honeypancake.bkk-logo.png" />
+  <link rel="apple-touch-icon" href="{{ SITEURL }}/images/honeypancake.bkk-logo.png">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ SITEURL }}/{{ relpath_to_site(DEFAULT_LANG, main_lang) }}/theme/css/style.css">
+</head>
+<body>
+{%- block adsense_page_level -%}{%- endblock -%}
+{% include 'layout/includes/top_nav.html' %}
+
+<main role="main">
+{%- block content -%}{%- endblock -%}
+{% include 'layout/includes/footer.html' %}
+</main>
+
+{% include 'layout/includes/cse.html' %}
+{% include 'layout/includes/analytics.html' %}
+{% include 'layout/includes/load_serviceWorker.html' %}
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
