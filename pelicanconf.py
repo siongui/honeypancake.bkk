@@ -18,7 +18,7 @@ ARTICLE_PATHS = ['articles']
 STATIC_PATHS = ['articles', 'pages', 'extra', 'images']
 EXTRA_PATH_METADATA = {'extra/robots.txt': {'path': 'robots.txt'},
                        'extra/manifest.json': {'path': 'manifest.json'},
-                       'extra/sw.js': {'path': 'sw.js'},
+                       'extra/pwabuilder-sw.js': {'path': 'pwabuilder-sw.js'},
                        'extra/CNAME': {'path': 'CNAME'},}
 
 # modify TIMEZONE to your timezone
